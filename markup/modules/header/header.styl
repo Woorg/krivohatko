@@ -1,0 +1,101 @@
+.header
+	@extend .in
+	&__body
+		position relative
+		padding-top 28px
+		padding-left 248px
+		padding-right 110px
+		min-height 192px
+		text-align center
+		font-weight normal
+		clearfix()
+	&__photo
+		position absolute
+		top -46px
+		left 0
+		bg($header-photo)
+	&__title
+		margin-left -16px
+		margin-bottom 16px
+		font-family $ubuntu-bld
+		font-size 40px
+		color #1b3d76
+	&__subtitle
+		margin-left -16px
+		margin-bottom 6px
+		font-family $ubuntu-med
+		font-size 20px
+		line-height 23px
+		color black
+	&__text
+		font-size 18px
+		font-family $ubuntu-lht
+		line-height 21px
+		color black
+
+.main-nav
+	height auto
+	background-color #0369b1
+	&__list
+		min-height 48px
+		font-size 0
+		clearfix()
+	&__item
+		position relative
+		max-width 228px
+		display inline-block
+		vertical-align top
+		white-space nowrap
+	&__link
+		padding-top 15px
+		padding-left 29px
+		padding-bottom 13px
+		padding-right 26px
+		display block
+		font-family $ubuntu-lht
+		font-size 18px
+		font-weight normal
+		color white
+		text-decoration none
+		text-overflow ellipsis
+		white-space nowrap
+		overflow hidden
+	&__item_active
+		.main-nav__link
+			background-color #6cbff9
+		.subnav
+			display block
+	&__item
+		&:last-child
+
+			.main-nav__link
+				margin-right -1px
+				padding-right 30px
+		&:hover
+			.main-nav__link
+				background-color #6cbff9
+.subnav
+	position absolute
+	top 100%
+	left 0
+	padding-top 6px
+	width 240px
+	display none
+	min-height 132px
+	background-color #6cbff9
+	// &__item
+	&__link
+		padding-top 1px
+		padding-bottom 1px
+		padding-left 20px
+		display block
+		font-family $ubuntu-reg
+		font-size 18px
+		font-weight normal
+		line-height 28px
+		color white
+		text-decoration none
+		&:hover
+			background-color #0369b1
+
+

@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-focus-ring-color: rgba(255,255,255,0);
+  cursor: default;
+}
+body {
+  font-size: 100%;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  background: transparent;
+}
+*:focus,
+*:active,
+*:hover {
+  outline: none;
+}
+hr {
+  -moz-box-sizing: content-box;
+       box-sizing: content-box;
+  height: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+pre {
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
+  white-space: pre-wrap;
+}
+q {
+  quotes: '\201C' '\201D' '\2018' '\2019';
+}
+img {
+  border: none;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+select {
+  text-transform: none;
+}
+button {
+  overflow: visible;
+}
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+input[type='checkbox'],
+input[type='radio'] {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+       box-sizing: content-box;
+}
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+button,
+input,
+select[multiple],
+textarea {
+  background-image: none;
+}
+input,
+select,
+textarea {
+  -moz-border-radius: 0;
+       border-radius: 0;
+  -moz-box-shadow: none;
+       box-shadow: none;
+}
+input,
+textarea {
+  resize: none;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+[placeholder]:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+[placeholder]:focus:-moz-placeholder {
+  color: transparent;
+}
+[placeholder]:focus::-moz-placeholder {
+  color: transparent;
+}
+[placeholder]:focus:-ms-input-placeholder {
+  color: transparent;
+}
+[placeholder]:focus::placeholder {
+  color: transparent;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+	@font-face {
+		font-family: 'ubunturegular';
+		src: url('../fonts/ubuntu-r-webfont.eot');
+		src: url('../fonts/ubuntu-r-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/ubuntu-r-webfont.woff2') format('woff2'),url('../fonts/ubuntu-r-webfont.woff') format('woff'),url('../fonts/ubuntu-r-webfont.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+
+	}
+
+
+	@font-face {
+		font-family: 'ubuntulight_italic';
+		src: url('../fonts/ubuntu-li-webfont.eot');
+		src: url('../fonts/ubuntu-li-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/ubuntu-li-webfont.woff2') format('woff2'),url('../fonts/ubuntu-li-webfont.woff') format('woff'),url('../fonts/ubuntu-li-webfont.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+
+	}
+
+
+	@font-face {
+		font-family: 'ubuntumedium';
+		src: url('../fonts/ubuntu-m-webfont.eot');
+		src: url('../fonts/ubuntu-m-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/ubuntu-m-webfont.woff2') format('woff2'),url('../fonts/ubuntu-m-webfont.woff') format('woff'),url('../fonts/ubuntu-m-webfont.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+
+	}
+
+
+
+
+	@font-face {
+		font-family: 'ubuntulight';
+		src: url('../fonts/ubuntu-l-webfont.eot');
+		src: url('../fonts/ubuntu-l-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/ubuntu-l-webfont.woff2') format('woff2'),url('../fonts/ubuntu-l-webfont.woff') format('woff'),url('../fonts/ubuntu-l-webfont.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+
+	}
+
+
+
+	@font-face {
+		font-family: 'ubuntubold';
+		src: url('../fonts/ubuntu-b-webfont.eot');
+		src: url('../fonts/ubuntu-b-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/ubuntu-b-webfont.woff2') format('woff2'),url('../fonts/ubuntu-b-webfont.woff') format('woff'),url('../fonts/ubuntu-b-webfont.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+
+	}
+.page {
+  background: #56b2fd url("../images/general/bg.jpg") 50% 100% no-repeat;
+  font-family: 'ubuntulight', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
+  -moz-background-size: cover;
+       background-size: cover;
+}
+.page__w {
+  padding-top: 50px;
+}
+.page__w-w {
+  margin: auto;
+  width: 1032px;
+  background-color: #fff;
+  -moz-border-radius: 9px;
+       border-radius: 9px;
+  -moz-box-shadow: 0 0 21px rgba(0,0,0,0.26);
+       box-shadow: 0 0 21px rgba(0,0,0,0.26);
+}
+.in,
+.header,
+.main {
+  margin: auto;
+  width: 1032px;
+}
+.header__body {
+  position: relative;
+  padding-top: 28px;
+  padding-left: 248px;
+  padding-right: 110px;
+  min-height: 192px;
+  text-align: center;
+  font-weight: normal;
+  zoom: 1;
+}
+.header__body:before,
+.header__body:after {
+  content: "";
+  display: table;
+}
+.header__body:after {
+  clear: both;
+}
+.header__photo {
+  position: absolute;
+  top: -46px;
+  left: 0;
+  width: 233px;
+  height: 238px;
+  background-position: 0px 0px;
+  background-image: url("../images/png-sprite/96dpi/spritevuvfm7psyvi.png");
+  -moz-background-size: 233px 238px;
+       background-size: 233px 238px;
+  background-repeat: no-repeat;
+}
+.header__title {
+  margin-left: -16px;
+  margin-bottom: 16px;
+  font-family: 'ubuntubold', Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  color: #1b3d76;
+}
+.header__subtitle {
+  margin-left: -16px;
+  margin-bottom: 6px;
+  font-family: 'ubuntumedium', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000;
+}
+.header__text {
+  font-size: 18px;
+  font-family: 'ubuntulight', Helvetica, Arial, sans-serif;
+  line-height: 21px;
+  color: #000;
+}
+.main-nav {
+  min-height: 48px;
+  background-color: #0369b1;
+}
+.main-nav__list {
+  font-size: 0;
+  zoom: 1;
+}
+.main-nav__list:before,
+.main-nav__list:after {
+  content: "";
+  display: table;
+}
+.main-nav__list:after {
+  clear: both;
+}
+.main-nav__item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+}
+.main-nav__link {
+  padding-top: 15px;
+  padding-left: 29px;
+  padding-bottom: 13px;
+  padding-right: 26px;
+  display: block;
+  font-family: 'ubuntulight', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: #fff;
+  text-decoration: none;
+}
+.main-nav__item_active .main-nav__link {
+  background-color: #6cbff9;
+}
+.main-nav__item_active .subnav {
+  display: block;
+}
+.main-nav__item:last-child .main-nav__link {
+  margin-right: -1px;
+  padding-right: 31px;
+}
+.main-nav__item:hover .main-nav__link {
+  background-color: #6cbff9;
+}
+.subnav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding-top: 6px;
+  width: 240px;
+  display: none;
+  min-height: 132px;
+  background-color: #6cbff9;
+}
+.subnav__link {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 20px;
+  display: block;
+  font-family: 'ubunturegular', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 28px;
+  color: #fff;
+  text-decoration: none;
+}
+.subnav__link:hover {
+  background-color: #0369b1;
+}
+.main {
+  min-height: 1500px;
+  background: #fff;
+}
