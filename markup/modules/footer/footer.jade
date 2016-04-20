@@ -1,2 +1,21 @@
 mixin footer(data)
-    footer.footer
+	+b('footer').footer
+		+b('nav').main-nav
+			+e('ul').list
+				+e('li').item
+					+e('a').link(href='#link') Головна
+				+e('li').item
+					+e('a').link(href='#link') Біографія
+				+e('li').item
+					+e('a').link(href='#link') Діяльність
+				+e('li').item
+					+e('a').link(href='#link') Благодійність
+				+e('li').item
+					+e('a').link(href='#link') Відео
+				+e('li').item
+					+e('a').link(href='#link') Запитання та відгуки
+				+e('li').item
+					+e('a').link(href='#link') Контакти
+		+e.w
+			+e('small').copyright 2016 - Офіційний сайт народного депутата України VIII скликання Видима Кривохатько
+

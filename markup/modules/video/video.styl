@@ -1,0 +1,49 @@
+.video
+	&__title
+		margin-bottom 15px
+		font-family $ubuntu-med
+		font-size 30px
+		font-weight normal
+		color #1b3d76
+		text-align center
+	&__list
+		clearfix()
+	&__item
+		margin-right 64px
+		margin-bottom 50px
+		width 280px
+		min-height 300px
+		display inline-block
+		vertical-align top
+		&:nth-child(3n)
+			margin-right 0
+	&__item-link
+		display block
+		text-decoration none
+	&__item-video
+		position relative
+		margin-bottom 6px
+		border 1px solid rgba(0, 0, 0, 0.13)
+		display block
+		width 280px
+		height 247px
+		background-color #f9f7f7
+		&:after
+			position absolute
+			top 50%
+			left 50%
+			content ""
+			margin-top -52px
+			margin-left -52px
+			bg($video-icon)
+	&__item-title
+		display block
+		font-family $ubuntu-reg
+		font-size 20px
+		font-weight normal
+		line-height 24px
+		color #020202
+		text-align center
+
+
+

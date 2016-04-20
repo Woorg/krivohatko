@@ -1,0 +1,85 @@
+doctype html
+html(class="no-js", lang="ru")
+
+
+	include ../../node_modules/bemto.jade/bemto
+
+	include ../modules/head/head
+	include ../modules/header/header
+	include ../modules/main/main
+	include ../modules/breadcrumbs/breadcrumbs
+	include ../modules/parliamentary-activities/parliamentary-activities
+	include ../modules/footer/footer
+
+	head
+		+head(head.defaults)
+	body.page
+		|%=symbols=%
+
+		.page__w
+			.page__w-w
+
+				+header()
+				+breadcrumbs
+					span(xmlns:v='http://rdf.data-vocabulary.org/#')
+						+e('span').list(typeof='v:Breadcrumb')
+							+e('a').item(href='#index', rel='v:url', property='v:title') Головна
+							| /
+							+e('a').item(href='#index', rel='v:url', property='v:title') Депутатьска діяльність
+							| /
+							+e('span').item._last Законотворчість
+				+main._style-2
+					+parliamentary-activities()
+						+e('h1').title._style-2 Законотворча діяльність
+						+e('p').text З ініціативи Вадима Кривохатька було було подано 6 авторських законопроектів та 4 законопроекти у співавторстві з іншими народними депутатами.
+
+						+e('table').table
+							+e('thead').table-head
+								+e('tr').table-row
+									+e('td').table-cell № реєстр. <br/>проекту
+									+e('td').table-cell Назва законопроекту
+							+e('tbody').table-body
+								+e('tr').table-row
+									+e('td').table-cell 1788
+									+e('td').table-cell про внесення змін до статті 124 Конституції України (щодо визнання положень Римського статуту)
+								+e('tr').table-row
+									+e('td').table-cell 2846
+									+e('td').table-cell про звільнення Авакова А.Б. з посади Міністра внутрішніх справ України
+								+e('tr').table-row
+									+e('td').table-cell 2967
+									+e('td').table-cell про внесення змін до деяких законів України (щодо окремих питань удосконалення забезпечення діяльності органів військової прокуратури)
+								+e('tr').table-row
+									+e('td').table-cell 3012
+									+e('td').table-cell про внесення змін до деяких законів України щодо створення умов для наповнення бюджетів усіх рівнів сільськогосподарськими товаровиробниками
+								+e('tr').table-row
+									+e('td').table-cell 3013
+									+e('td').table-cell про внесення змін до Податкового кодексу щодо створення умов для наповнення бюджетів усіх рівнів сільськогосподарськими товаровиробниками
+								+e('tr').table-row
+									+e('td').table-cell 3036
+									+e('td').table-cell про внесення змін до Кодексу України про адміністративні правопорушення та Кримінального кодексу України щодо посилення відповідальності за допуск працівника до роботи без оформлення трудового договору (контракту)
+								+e('tr').table-row
+									+e('td').table-cell 3412
+									+e('td').table-cell про внесення змін до Закону України "Про Регламент Верховної Ради України" (щодо вшанування пам'яті героїв "Небесної Сотні" та загиблих учасників антитерористичної операції)
+								+e('tr').table-row
+									+e('td').table-cell 3518
+									+e('td').table-cell про внесення змін до деяких законів України щодо забезпечення правопорядку під час роботи Верховної Ради України
+								+e('tr').table-row
+									+e('td').table-cell 3599
+									+e('td').table-cell про внесення змін до Закону України "Про регулювання містобудівної діяльності" (щодо уточнення деяких положень)
+								+e('tr').table-row
+									+e('td').table-cell 3762
+									+e('td').table-cell про внесення змін до розділу І Закону України "Про внесення змін до Податкового кодексу України та деяких законодавчих актів України щодо забезпечення збалансованості бюджетних надходжень у 2016 році" та до пункту 1 "Прикінцевих положень" цього Закону
+								+e('tr').table-row
+									+e('td').table-cell 4309
+									+e('td').table-cell про внесення змін до Податкового кодексу України щодо сплати земельного податку пенітенціарними установами
+
+
+
+				+footer()
+
+
+		script(src='%=static=%js/separate-js/svg4everybody.min.js')
+		script svg4everybody();
+
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')

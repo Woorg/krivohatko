@@ -1,0 +1,101 @@
+.subscribe
+	margin-bottom 46px
+	border 1px solid rgba(0, 0, 0, 0.13)
+	// width 322px
+	min-height 176px
+	background-color #fbfbfb
+	&__w
+		padding-top 14px
+		padding-right 30px
+		padding-left 41px
+		padding-bottom 26px
+		display block
+
+	&__title
+		margin-left -18px
+		margin-bottom 14px
+		font-family $ubuntu-med
+		font-size 24px
+		font-weight normal
+		color #0d3f62
+		text-align center
+	// &__form
+
+	&__input
+		position relative
+		border 1px solid rgba(0, 0, 0, 0.08)
+		margin-bottom 7px
+		position relative
+		width 246px
+		height 23px
+		cursor pointer
+		input
+			border none
+			padding 7px 13px 6px
+			width 100%
+			height 100%
+			background-color white
+			font-family $ubuntu-lhtit
+			font-size 13px
+			font-weight normal
+			color #020202
+			+placeholder()
+				color #020202
+	&__input-error
+		border 1px solid #db222a
+		input
+			+placeholder()
+				color #db222a
+	&__input_name
+		&:after
+			position absolute
+			top 50%
+			left -20px
+			content ""
+			margin-top -8px
+			bg($name-icon)
+	&__input_email
+		&:after
+			position absolute
+			top 50%
+			left -20px
+			content ""
+			margin-top -8px
+			bg($email-icon)
+
+	&__submit
+		margin-top 7px
+		padding 7px 39px 6px 36px
+		border none
+		background-color #e8831d
+		background-image linear-gradient(to top, #e12128 0%, #d6232b 100%)
+		font-family $ubuntu-med
+		font-size 14px
+		font-weight normal
+		color white
+		border-radius 4px
+		&:hover
+			box-shadow 0 0 6.1px 0.9px rgba(0, 0, 0, 0.26)
+
+.success
+	display none
+	&__w
+		padding-top 46px
+		padding-right 46px
+		padding-bottom 50px
+		padding-left 42px
+		clearfix()
+	&__icon
+		margin-right 8px
+		display inline-block
+		vertical-align middle
+		float left
+		bg($success-icon)
+	&__text
+		padding-top 6px
+		font-family $ubuntu-reg
+		font-size 24px
+		font-weight normal
+		line-height 1
+		color #010101
+

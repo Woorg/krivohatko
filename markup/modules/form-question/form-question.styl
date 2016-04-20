@@ -1,0 +1,67 @@
+.form-question
+	border 1px solid rgba(0, 0, 0, 0.19)
+	padding 20px 33px 21px 28px
+	width 337px
+	min-height 382px
+	float right
+	background-color #fbfbfb
+	border-radius 4px
+	&__title
+		margin-bottom 22px
+		font-family $ubuntu-reg
+		font-size 20px
+		font-weight normal
+		color #020202
+		text-align center
+	&__input-w
+		margin-bottom 13px
+		font-size 0
+		clearfix()
+	&__label
+		padding-top 4px
+		padding-right 11px
+		display block
+		width 80px
+		float left
+		font-size 14px
+		color #020202
+		text-align right
+	&__input
+		border 1px solid rgba(0, 0, 0, 0.06)
+		padding 0 10px
+		width 194px
+		height 23px
+		float right
+		background-color white
+		font-size 14px
+		color #020202
+	&__textarea
+		margin-bottom 18px
+		padding 11px 10px
+		border 1px solid rgba(0, 0, 0, 0.06)
+		width 276px
+		min-height 123px
+		background-color white
+		font-size 14px
+		color #020202
+		+placeholder()
+			color #020202
+	&__input-error
+		border 1px solid red
+		+placeholder()
+			color red
+	&__button-w
+		text-align center
+	&__button
+		border none
+		padding 3px 65px 5px 69px
+		display inline-block
+		background-color #ed1c24
+		font-family $ubuntu-reg
+		font-size 18px
+		font-weight normal
+		color white
+		border-radius 4px
+		&:hover
+			background-color darken(#ed1c24, 3)
+

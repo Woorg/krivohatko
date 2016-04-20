@@ -1,8 +1,10 @@
 .header
 	@extend .in
+	padding-left 0
+	padding-right 0
 	&__body
 		position relative
-		padding-top 28px
+		padding-top 18px
 		padding-left 248px
 		padding-right 110px
 		min-height 192px
@@ -16,13 +18,13 @@
 		bg($header-photo)
 	&__title
 		margin-left -16px
-		margin-bottom 16px
+		margin-bottom 5px
 		font-family $ubuntu-bld
 		font-size 40px
 		color #1b3d76
 	&__subtitle
 		margin-left -16px
-		margin-bottom 6px
+		margin-bottom 8px
 		font-family $ubuntu-med
 		font-size 20px
 		line-height 23px
@@ -49,7 +51,7 @@
 	&__link
 		padding-top 15px
 		padding-left 29px
-		padding-bottom 13px
+		padding-bottom 15px
 		padding-right 26px
 		display block
 		font-family $ubuntu-lht
@@ -60,11 +62,13 @@
 		text-overflow ellipsis
 		white-space nowrap
 		overflow hidden
-	&__item_active
-		.main-nav__link
-			background-color #6cbff9
-		.subnav
-			display block
+	// &__item_active
+	&__item
+		&:hover
+			.main-nav__link
+				background-color #6cbff9
+			.subnav
+				display block
 	&__item
 		&:last-child
 

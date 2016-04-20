@@ -8,7 +8,11 @@ html(class="no-js", lang="ru")
 	include ../modules/header/header
 	include ../modules/main/main
 	include ../modules/content/content
+	include ../modules/meetings/meetings
+	include ../modules/questions/questions
 	include ../modules/sidebar/sidebar
+	include ../modules/subscribe/subscribe
+	include ../modules/schedule/schedule
 
 	include ../modules/footer/footer
 
@@ -23,7 +27,34 @@ html(class="no-js", lang="ru")
 				+header()
 				+main()
 					+content()
+						+meetings()
+						+questions()
+							+e('h1').title Запитання та відгуки
+							+b.question
+								+e.w
+									+e.name Марія Василівна
+									+e.text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo <br/>ligula eget dolor?
+									+b.answer
+										+e.name Вадим Кривохатько
+										+e.text Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+							+b.question
+								+e.w
+									+e.name Куліков Дмитро Миколайович
+									+e.text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo <br/>ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis?
+									+b.answer
+										+e.name Вадим Кривохатько
+										+e.text Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+							+b.question
+								+e.w
+									+e.name Марія Василівна
+									+e.text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo <br/>ligula eget dolor?
+									+b.answer
+										+e.name Вадим Кривохатько
+										+e.text Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+
 					+sidebar()
+						+subscribe()
+						+schedule()
 				+footer()
 
 

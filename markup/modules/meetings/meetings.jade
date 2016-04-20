@@ -1,0 +1,21 @@
+mixin meetings(data)
+	+b('section').meetings
+		+e('h1').title Нещодавні зустрічі
+		+e.item
+			+e.image._left
+				+e('img')(src='' alt='')
+			+e.date
+				+e.date-icon
+				+e('span') 10 березня 2015
+			+e('h2').item-title <a href='#link'>Заголовок зустрічі</a>
+			+e('p').item-text Lorem ipsum dolor sit amet, consectetuer adip iscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+		+e.item
+			+e.date
+				+e.date-icon
+				+e('span') 10 березня 2015
+			+e('h2').item-title <a href='#link'>Заголовок зустрічі</a>
+			+e('p').item-text Корткий опис зустрічі, якщо потрібно. Коротко про зустріч
+
+		+e.more
+			+e('a')(href='#more') Показати усі зустрічі
+

@@ -1,0 +1,56 @@
+.contacts
+	margin-bottom 22px
+	float left
+	&__title
+		margin-bottom 14px
+		font-family $ubuntu-med
+		font-size 30px
+		font-weight normal
+		color #1b3d76
+	&__item
+		margin-bottom 50px
+	&__text
+		margin-bottom 10px
+		font-family $ubuntu-reg
+		font-size 18px
+		font-weight normal
+		color black
+	&__list
+		padding-left 14px
+	&__list-item
+		position relative
+		margin-bottom 10px
+		font-family $ubuntu-lht
+		font-size 18px
+		line-height 20px
+		color black
+		&_address,
+		&_phone,
+		&_mail
+			&:before
+				position absolute
+				top 50%
+				left -16px
+				content ""
+		&_address
+			&:before
+				margin-top -7px
+				bg($marker-icon)
+		&_phone
+			&:before
+				margin-top -7px
+				bg($phone-icon)
+		&_mail
+			a
+				color black
+				text-decoration none
+				&:hover
+					text-decoration underline
+			&:before
+				margin-top -4px
+				bg($email-2-icon)
+
+
+
+
+

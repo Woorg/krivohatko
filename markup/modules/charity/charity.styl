@@ -1,0 +1,89 @@
+.charity
+	width 620px
+	float left
+	&__title
+		margin-bottom 7px
+		font-family $ubuntu-med
+		font-size 30px
+		font-weight normal
+		color #1b3d76
+	&__text
+		margin-bottom 3px
+		font-size 16px
+		color #020202
+		line-height 24px
+	h2,
+	h3
+		margin-top 17px
+		margin-bottom 0
+		font-family $ubuntu-reg
+		font-size 16px
+		font-weight normal
+		line-height 24px
+		color #020202
+	h3
+		margin-top 0
+		margin-bottom 5px
+	&__list
+		margin-bottom 30px
+	&__item
+		position relative
+		margin-bottom 11px
+		padding-left 12px
+		font-size 16px
+		line-height 19px
+		color #020202
+		&:before
+			position absolute
+			top 50%
+			left 0
+			content ""
+			margin-top -3px
+			size 6px
+			background-color #0369b1
+
+
+.charity-side
+	width 324px
+	float right
+	&__list
+		font-size 0
+		clearfix()
+	&__item
+		margin-right 20px
+		margin-bottom 16px
+		width 152px
+		min-height 200px
+		display inline-block
+		vertical-align top
+		&:nth-child(2n)
+			margin-right 0
+	&__item-link
+		display block
+		text-decoration none
+	&__item-image
+		margin-bottom 7px
+		display block
+		width 151px
+		height 151px
+		img
+			display block
+			max-width 100%
+			height auto
+	&__item-title
+		display block
+		font-family $ubuntu-reg
+		font-size 16px
+		font-weight normal
+		line-height 18px
+		color #0369b1
+		text-align center
+	&__item-link
+		&:hover
+			.charity-side__item-title
+				text-decoration underline
+
+
+
+
+

@@ -1,0 +1,16 @@
+mixin form-question(data)
+	+b.form-question
+		+e('h2').title Задати запитання або залишити відгук
+		+e('form')#form-question
+			+e.input-w
+				+e('label').label(for='name-question') Ваше iм"я:
+				+e('input').input#name-question(type='text' placeholder='' value='' name='name' )
+			+e.input-w
+				+e('label').label(for='email-question') Email:
+				+e('input').input#email-question(type='text' placeholder='' value='' name='email' )
+			+e.input-w
+				+e('label').label(for='phone-question') Телефон:
+				+e('input').input#phone-question(type='text' placeholder='' value='' name='phone' )
+			+e('textarea').textarea(placeholder='Запитання чи відгук' name='message')
+			+e.button-w
+				+e('button').button Надіслати

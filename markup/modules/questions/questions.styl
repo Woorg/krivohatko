@@ -1,0 +1,68 @@
+.questions
+	&__title
+		margin-bottom 9px
+		font-size 28px
+		color #1b3d76
+	&__title_big
+		margin-left -16px
+		margin-bottom 19px
+		font-family $ubuntu-med
+		font-size 30px
+		font-weight normal
+		text-align center
+		color #1b3d76
+	&__more
+		text-align right
+		a
+			text-decoration underline
+			color #0369b1
+			&:hover
+				text-decoration none
+
+.question
+	margin-bottom 31px
+
+	&__w
+		clearfix()
+	&__name
+		margin-bottom 6px
+		font-family $ubuntu-reg
+		font-size 20px
+		font-weight normal
+		color #04548d
+	&__text
+		margin-bottom 18px
+		font-size 18px
+		color black
+		line-height 20px
+		letter-spacing tracking(-24)
+.answer
+	position relative
+	border 1px solid rgba(0, 0, 0, 0.28)
+	padding-top 10px
+	padding-left 16px
+	padding-right 20px
+	padding-bottom 28px
+	float right
+	width 561px
+	min-height 120px
+	background-color #fbfbfb
+	&:before
+		position absolute
+		top -10px
+		left 18px
+		content ""
+		bg($answer-arrow)
+	&__name
+		margin-bottom 5px
+		font-family $ubuntu-reg
+		font-size 20px
+		font-weight normal
+		color #0369b1
+	&__text
+		color black
+		line-height 19px
+
+
+
+

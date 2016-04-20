@@ -1,0 +1,102 @@
+doctype html
+html(class="no-js", lang="ru")
+
+
+	include ../../node_modules/bemto.jade/bemto
+
+	include ../modules/head/head
+	include ../modules/header/header
+	include ../modules/main/main
+	include ../modules/breadcrumbs/breadcrumbs
+	include ../modules/charity/charity
+
+	include ../modules/footer/footer
+
+	head
+		+head(head.defaults)
+	body.page
+		|%=symbols=%
+
+		.page__w
+			.page__w-w
+
+				+header()
+				+breadcrumbs
+					span(xmlns:v='http://rdf.data-vocabulary.org/#')
+						+e('span').list(typeof='v:Breadcrumb')
+							+e('a').item(href='#index', rel='v:url', property='v:title') Головна
+							| /
+							+e('span').item._last Благодійність
+				+main._style-3
+					+charity()
+						+e('h1').title Благодійність
+						+e('p').text Стосовно благодійності треба зазначити, що народний депутат постійно  знаходить можливість реагування на матеріальні проблеми місцевих жителів. Зокрема, у цьому році Кривохатьком В. В. було передано НВК «Всесвіт» (с. Матвіївка) автобус, що розв’язав проблему з доставкою дітей на навчання. У НВК навчається понад 600 дітей, значна частина яких живе в інших населених пунктах.
+						+e('p').text Окремо варто зупинитися на тому, що з початку роботи Верховної Ради України VIII скликання, Кривохатько В. В. жодного разу не звертався до апарату ВРУ щодо відшкодування за оренду житла, жодного разу не отримував компенсації за перельоти та проїзд залізничним транспортом.
+						+e('p').text З першого місяця роботи заробітна плата нду Кривохатька В. В. перераховується апаратом Верховної Ради України на рахунок КДНЗ «Ясла-садок №6 «Дзвіночок» Вільнянської міської ради», що дозволило їм протягом 2015 року здійснити заміну вікон в садочку.
+						+e('p').text Понад 200 000 гривень за 2015 рік Кривохатько В. В. перераховував на лікування дітей. 15 000 гривень виділив Пологівській ГО, що опікується проблемами переселенців. Регулярно матеріально допомагає школам, лікарням, бібліотекам. Зокрема, з придбанням ліків, обладнання, ремонтом приміщень.
+						+e('h2') Народним депутатом було зроблено:
+
+						+e('h3') У сфері ЖКГ:
+						+e('ul').list
+							+e('li').item заміна водоводів, смт.Кам’яне;
+							+e('li').item газифікація села, с. Яковлеве;
+							+e('li').item освітлення вулиць, с. Московка
+							+e('li').item ремонт доріг
+
+						+e('h3') У сфері медицини:
+						+e('ul').list
+							+e('li').item придбання двох машин «швидкої» для районної лікарні, м.Вільнянськ
+							+e('li').item придбання медичного обладнання для амбулаторії, с. Терсянка
+							+e('li').item заасфальтування під’їздної дороги до ФАБу, с. Новоолександрівка
+
+					+b.charity-side
+						+e('ul').list
+							+e('li').item
+								+e('a').item-link(href='#link')
+									+e.item-image
+										+e('img')(src='assets/images/content/charity-1.jpg' alt='')
+									+e.item-title Заголовок статті про благодійність
+
+							+e('li').item
+								+e('a').item-link(href='#link')
+									+e.item-image
+										+e('img')(src='assets/images/content/charity-2.jpg' alt='')
+									+e.item-title Заголовок статті про благодійність
+
+							+e('li').item
+								+e('a').item-link(href='#link')
+									+e.item-image
+										+e('img')(src='assets/images/content/charity-3.jpg' alt='')
+									+e.item-title Заголовок статті про благодійність
+
+							+e('li').item
+								+e('a').item-link(href='#link')
+									+e.item-image
+										+e('img')(src='assets/images/content/charity-4.jpg' alt='')
+									+e.item-title Заголовок статті про благодійність
+
+							+e('li').item
+								+e('a').item-link(href='#link')
+									+e.item-image
+										+e('img')(src='assets/images/content/charity-5.jpg' alt='')
+									+e.item-title Заголовок статті про благодійність
+
+							+e('li').item
+								+e('a').item-link(href='#link')
+									+e.item-image
+										+e('img')(src='assets/images/content/charity-6.jpg' alt='')
+									+e.item-title Заголовок статті про благодійність
+
+
+
+
+
+
+				+footer()
+
+
+		script(src='%=static=%js/separate-js/svg4everybody.min.js')
+		script svg4everybody();
+
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')

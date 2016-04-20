@@ -1,0 +1,66 @@
+doctype html
+html(class="no-js", lang="ru")
+
+
+	include ../../node_modules/bemto.jade/bemto
+
+	include ../modules/head/head
+	include ../modules/header/header
+	include ../modules/main/main
+	include ../modules/breadcrumbs/breadcrumbs
+	include ../modules/video/video
+
+	include ../modules/footer/footer
+
+	head
+		+head(head.defaults)
+	body.page
+		|%=symbols=%
+
+		.page__w
+			.page__w-w
+
+				+header()
+				+breadcrumbs
+					span(xmlns:v='http://rdf.data-vocabulary.org/#')
+						+e('span').list(typeof='v:Breadcrumb')
+							+e('a').item(href='#index', rel='v:url', property='v:title') Головна
+							| /
+							+e('span').item._last Відео
+				+main._style-3
+					+video
+						+e('h1').title
+
+						+e('ul').list
+							+e('li').item
+								+e('a').item-link(href='#link')
+									+e.item-video
+									+e.item-title Заголовок першого відео з YouTube
+							+e('li').item
+								+e('a').item-link(href='#link')
+									+e.item-video
+									+e.item-title Заголовок другого відео з YouTube
+
+							+e('li').item
+								+e('a').item-link(href='#link')
+									+e.item-video
+									+e.item-title Заголовок третього відео з YouTube
+
+							+e('li').item
+								+e('a').item-link(href='#link')
+									+e.item-video
+									+e.item-title Довший заголовок четвертого відео з YouTube
+
+							+e('li').item
+								+e('a').item-link(href='#link')
+									+e.item-video
+									+e.item-title Заголовок пятого відео з YouTube
+
+				+footer()
+
+
+		script(src='%=static=%js/separate-js/svg4everybody.min.js')
+		script svg4everybody();
+
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')

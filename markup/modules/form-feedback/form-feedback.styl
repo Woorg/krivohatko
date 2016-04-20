@@ -1,0 +1,74 @@
+.form-feedback
+	border 1px solid rgba(0, 0, 0, 0.19)
+	margin-top 14px
+	margin-right 20px
+	padding 20px 32px 21px 28px
+	width 402px
+	min-height 332px
+	float right
+	background-color #fbfbfb
+	border-radius 9px
+	&__title
+		margin-bottom 19px
+		font-family $ubuntu-reg
+		font-size 24px
+		font-weight normal
+		color black
+		text-align center
+	&__input-w
+		margin-bottom 13px
+		font-size 0
+		clearfix()
+	&__label
+		padding-top 8px
+		padding-right 0
+		display block
+		width 60px
+		float left
+		font-size 12px
+		color black
+		text-align left
+	&__input
+		border 1px solid rgba(0, 0, 0, 0.06)
+		padding 0 10px
+		width 275px
+		height 23px
+		float right
+		background-color white
+		font-size 12px
+		color black
+	&__textarea
+		margin-bottom 16px
+		padding 9px 8px
+		border 1px solid rgba(0, 0, 0, 0.06)
+		width 342px
+		min-height 125px
+		background-color white
+		font-size 12px
+		color black
+		+placeholder()
+			color black
+	&__input-w
+		&:nth-child(2)
+			.form-feedback__label
+				text-align right
+	&__input-error
+		border 1px solid red
+		+placeholder()
+			color red
+	&__button-w
+		text-align center
+	&__button
+		border none
+		padding 5px 34px 6px 34px
+		display inline-block
+		background-color #ed1c24
+		font-family $ubuntu-reg
+		font-size 14px
+		font-weight normal
+		color white
+		border-radius 3px
+		&:hover
+			background-color darken(#ed1c24, 3)
+
+

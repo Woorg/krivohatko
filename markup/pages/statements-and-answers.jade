@@ -1,0 +1,83 @@
+doctype html
+html(class="no-js", lang="ru")
+
+
+	include ../../node_modules/bemto.jade/bemto
+
+	include ../modules/head/head
+	include ../modules/header/header
+	include ../modules/main/main
+	include ../modules/breadcrumbs/breadcrumbs
+	include ../modules/parliamentary-activities/parliamentary-activities
+	include ../modules/footer/footer
+
+	head
+		+head(head.defaults)
+	body.page
+		|%=symbols=%
+
+		.page__w
+			.page__w-w
+
+				+header()
+				+breadcrumbs
+					span(xmlns:v='http://rdf.data-vocabulary.org/#')
+						+e('span').list(typeof='v:Breadcrumb')
+							+e('a').item(href='#index', rel='v:url', property='v:title') Головна
+							| /
+							+e('a').item(href='#index', rel='v:url', property='v:title') Депутатьска діяльність
+							| /
+							+e('span').item._last Звернення та відповіді
+				+main._style-2
+					+parliamentary-activities()
+						+e('h1').title._style-2 Звернення та відповіді
+						+e('p').text Щодо депутатських запитів треба зазначити, що 5 із них було подано до Кабінету Міністрів України, 5 до керівників міністерств і відомств України, 1 запит був наданий Генеральному прокурору України. Всі 11 запитів були розглянуті та по кожному з них було досягнуто конкретного результату.
+
+						+e('table').table
+							+e('thead').table-head._style-2
+								+e('tr').table-row
+									+e('td').table-cell №
+									+e('td').table-cell Дата звернення
+									+e('td').table-cell До кого звернення
+									+e('td').table-cell Зміст звернення
+									+e('td').table-cell Стан виконання
+							+e('tbody').table-body._style-2
+								+e('tr').table-row
+									+e('td').table-cell 131
+									+e('td').table-cell 13.04.2015
+									+e('td').table-cell Міністерство охорони здоров"я України - Квіташвілі О.
+									+e('td').table-cell Депутатьске звернення щодо сприяння проведенню якісного медичного обстеження громадянки Бичкової Олени Миколаївни.
+									+e('td').table-cell Відповідь №16.05-Д-1/12-5-15 від 18.05.2016 року - Міністр охорони здоров"я України Олександр Квіташвілі
+								+e('tr').table-row
+									+e('td').table-cell 11/10-2111
+									+e('td').table-cell 03.07.2015 <br/>(2 сесія)
+									+e('td').table-cell Міністерство аграрної політики та продовольства України - Павленко Олексій Михайлович
+									+e('td').table-cell Депутатьске звернення щодо сприяння проведенню якісного медичного обстеження громадянки Бичкової Олени Миколаївни.
+									+e('td').table-cell Відповідь №16.05-Д-1/12-5-15 від 18.05.2016 року - Міністр охорони здоров"я України Олександр Квіташвілі
+								+e('tr').table-row
+									+e('td').table-cell 131
+									+e('td').table-cell 13.04.2015
+									+e('td').table-cell Міністерство охорони здоров"я України - Квіташвілі О.
+									+e('td').table-cell Депутатьске звернення щодо сприяння проведенню якісного медичного обстеження громадянки Бичкової Олени Миколаївни.
+									+e('td').table-cell Відповідь №16.05-Д-1/12-5-15 від 18.05.2016 року -  Міністр охорони здоров"я України Олександр Квіташвілі
+								+e('tr').table-row
+									+e('td').table-cell 11/10-2111
+									+e('td').table-cell 03.07.2015 <br/>(2 сесія)
+									+e('td').table-cell Міністерство аграрної політики та продовольства України - Павленко Олексій Михайлович
+									+e('td').table-cell Депутатьске звернення щодо сприяння проведенню якісного медичного обстеження громадянки Бичкової Олени Миколаївни.
+									+e('td').table-cell Відповідь №16.05-Д-1/12-5-15 від 18.05.2016 року - Міністр охорони здоров"я України Олександр Квіташвілі
+								+e('tr').table-row
+									+e('td').table-cell 11/10-2111
+									+e('td').table-cell 03.07.2015 <br/>(2 сесія)
+									+e('td').table-cell Міністерство аграрної політики та продовольства України - Павленко Олексій Михайлович
+									+e('td').table-cell Депутатьске звернення щодо сприяння проведенню якісного медичного обстеження громадянки Бичкової Олени Миколаївни.
+									+e('td').table-cell Відповідь №16.05-Д-1/12-5-15 від 18.05.2016 року -  Міністр охорони здоров"я України Олександр Квіташвілі
+
+				+footer()
+
+
+		script(src='%=static=%js/separate-js/svg4everybody.min.js')
+		script svg4everybody();
+
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')

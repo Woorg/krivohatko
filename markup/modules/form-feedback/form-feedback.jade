@@ -1,0 +1,14 @@
+mixin form-feedback(data)
+	+b.form-feedback
+		+e('h2').title Зворотній зв"язок
+		+e('form')#form-feedback
+			+e.input-w
+				+e('label').label(for='name-feedback') Ваше iм"я:
+				+e('input').input#name-feedback(type='text' placeholder='' value='' name='name' )
+			+e.input-w
+				+e('label').label(for='email-feedback') Email:
+				+e('input').input#email-feedback(type='text' placeholder='' value='' name='email' )
+
+			+e('textarea').textarea(placeholder='Текст повідомлення' name='message')
+			+e.button-w
+				+e('button').button Надіслати

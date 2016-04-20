@@ -1,0 +1,62 @@
+doctype html
+html(class="no-js", lang="ru")
+
+
+	include ../../node_modules/bemto.jade/bemto
+
+	include ../modules/head/head
+	include ../modules/header/header
+	include ../modules/main/main
+	include ../modules/breadcrumbs/breadcrumbs
+	include ../modules/parliamentary-activities/parliamentary-activities
+	include ../modules/footer/footer
+
+	head
+		+head(head.defaults)
+	body.page
+		|%=symbols=%
+
+		.page__w
+			.page__w-w
+
+				+header()
+				+breadcrumbs
+					span(xmlns:v='http://rdf.data-vocabulary.org/#')
+						+e('span').list(typeof='v:Breadcrumb')
+							+e('a').item(href='#index', rel='v:url', property='v:title') Головна
+							| /
+							+e('span').item._last Депутатьска діяльність
+				+main._style-2
+					+parliamentary-activities()
+						+e('h1').title Депутатьска діяльність
+
+						+e('ul').list
+							+e('li').item
+								+e('a').item-link(href='#link')
+									+e.item-image
+										+e('img')(src='assets/images/content/activities-1.jpg' alt='')
+									+e('h2').item-title Законотворчість
+									+e('p').item-text За час роботи у Верховній Раді України з законодавчої ініціативи Вадима Кривохатька було підготовлено та зареєстровано 11 депутатських запитів, що стосуютсья актуальних проблем щодо, зокрема, наповненнябюджетів.
+							+e('li').item
+								+e('a').item-link(href='#link')
+									+e.item-image
+										+e('img')(src='assets/images/content/activities-2.jpg' alt='')
+									+e('h2').item-title Робота з виборцями
+									+e('p').item-text Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia
+							+e('li').item
+								+e('a').item-link(href='#link')
+									+e.item-image
+										+e('img')(src='assets/images/content/activities-3.jpg' alt='')
+									+e('h2').item-title Законотворчість
+									+e('p').item-text Було подано 11 депутатьских запитів, 5 із них було подано до Кабінету Міністрів України, 5 до керівників міністерств і відомств України, 1 запит був наданий Генеральному прокурору України.
+
+
+
+				+footer()
+
+
+		script(src='%=static=%js/separate-js/svg4everybody.min.js')
+		script svg4everybody();
+
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')

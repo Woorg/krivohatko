@@ -1,0 +1,70 @@
+doctype html
+html(class="no-js", lang="ru")
+
+
+	include ../../node_modules/bemto.jade/bemto
+
+	include ../modules/head/head
+	include ../modules/header/header
+	include ../modules/main/main
+	include ../modules/breadcrumbs/breadcrumbs
+	include ../modules/parliamentary-activities/parliamentary-activities
+	include ../modules/footer/footer
+
+	head
+		+head(head.defaults)
+	body.page
+		|%=symbols=%
+
+		.page__w
+			.page__w-w
+
+				+header()
+				+breadcrumbs
+					span(xmlns:v='http://rdf.data-vocabulary.org/#')
+						+e('span').list(typeof='v:Breadcrumb')
+							+e('a').item(href='#index', rel='v:url', property='v:title') Головна
+							| /
+							+e('a').item(href='#index', rel='v:url', property='v:title') Депутатьска діяльність
+							| /
+							+e('span').item._last Зустрічі з виборцями
+				+main._style-2
+					+parliamentary-activities()
+						+e('h1').title._style-3 Зустрічі з виборцями
+						+e('p').text._style-2 За час депутатської діяльності Кривохатьком В. В. було проведено понад 40 зустрічей з виборцями; кількість проведених особистих прийомів ( в т.ч. в громадських приймальнях) – понад 200. <br/> Було також розглянуто 535 письмових звернень громадян, за результатами розгляду яких було підготовлено і направлено 520 депутатських звернень, по більшості з них було досягнуто конкретного результату. <br/> Загалом за цей період до народного депутата України звернулося більше 3500 людей. <br/> В межах округу в районних центрах, містах та селах, що входять до його складу, працюють помічники народного депутата України <br/>Кривохатька В. В., які регулярно проводять зустрічі з виборцями, приймають від них заяви та скарги для подальшого реагування.
+
+						+b.article
+							+e.image
+								+e('img')(src='' alt='')
+							+e.w
+								+e('h2').title Заголовок зустрічі дуже довгий, й ще довше)
+								+e.date
+									+e.date-icon
+									+e('span') 10 березня 2015
+								+e.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec ,mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec maur is sit amet elit iaculis pretium sit amet quis magna. Lorem ipsum dolor sit amet, consectetur adipis cing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.
+								+e.more
+									+e('a')(href='#link') Детальніше &gt;&gt;
+
+						+b.article
+							+e.image
+								+e('img')(src='' alt='')
+							+e.w
+								+e('h2').title Заголовок зустрічі дуже довгий, й ще довше)
+								+e.date
+									+e.date-icon
+									+e('span') 10 березня 2015
+								+e.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec ,mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec maur is sit amet elit iaculis pretium sit amet quis magna. Lorem ipsum dolor sit amet, consectetur adipis cing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.
+								+e.more
+									+e('a')(href='#link') Детальніше &gt;&gt;
+
+
+
+
+				+footer()
+
+
+		script(src='%=static=%js/separate-js/svg4everybody.min.js')
+		script svg4everybody();
+
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')

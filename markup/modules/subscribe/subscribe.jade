@@ -1,0 +1,18 @@
+mixin subscribe(data)
+	+b.subscribe
+		+e.w
+			+e('h2').title Приєднуйся
+			+e.form
+				+e('form')#subscribe(method='post' action='')
+					+e.input._name
+						+e('input')(type='text' value='' placeholder="ім'я" name='name' )
+					+e.input._email
+						+e('input')(type='text' value='' placeholder='E-mail' name='email' )
+					+e('button').submit Підписатися на новини
+		+b.success
+			+e.w
+				+e.icon
+				+e.text Ви успішно <br/>підписані на <br/>новини!
+
+
+

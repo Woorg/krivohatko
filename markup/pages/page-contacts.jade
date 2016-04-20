@@ -1,0 +1,56 @@
+doctype html
+html(class="no-js", lang="ru")
+
+
+	include ../../node_modules/bemto.jade/bemto
+
+	include ../modules/head/head
+	include ../modules/header/header
+	include ../modules/main/main
+	include ../modules/breadcrumbs/breadcrumbs
+	include ../modules/contacts/contacts
+	include ../modules/form-feedback/form-feedback
+
+	include ../modules/footer/footer
+
+	head
+		+head(head.defaults)
+	body.page
+		|%=symbols=%
+
+		.page__w
+			.page__w-w
+
+				+header()
+				+breadcrumbs
+					span(xmlns:v='http://rdf.data-vocabulary.org/#')
+						+e('span').list(typeof='v:Breadcrumb')
+							+e('a').item(href='#index', rel='v:url', property='v:title') Головна
+							| /
+							+e('span').item._last Контакти
+				+main._style-3
+					+contacts
+						+e('h1').title Контакти
+						+e.item
+							+e('p').text Під час пленарних тижней та роботи у комітеті:
+							+e('ul').list
+								+e('li').list-item._address м. Київ, вул. Грушевського 5
+								+e('li').list-item._phone (044) 255 35 65
+								+e('li').list-item._mail
+									+e('a')(href='mailto:Kryvokhatko.Vadym@rada.gov.ua') Kryvokhatko.Vadym@rada.gov.ua
+						+e.item
+							+e('p').text Під час роботи на окрузі:
+							+e('ul').list
+								+e('li').list-item._address м. Запоріжжя, вул. Патріотична 20А
+								+e('li').list-item._phone (061) 708 06 62
+								+e('li').list-item (061) 708 06 63
+					+form-feedback()
+
+				+footer()
+
+
+		script(src='%=static=%js/separate-js/svg4everybody.min.js')
+		script svg4everybody();
+
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')

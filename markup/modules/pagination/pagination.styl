@@ -1,0 +1,41 @@
+.pagination
+	text-align center
+	&__link
+		margin-left 8px
+		display inline-block
+		vertical-align top
+		size 26px
+		background-color white
+		background-image linear-gradient(to top, #e8e8e8 0%, white 100%)
+		font-size 13px
+		color #474646
+		line-height 26px
+		text-decoration none
+		border-radius 50%
+		box-shadow -0.8px 0.6px 3px rgba(140, 137, 137, 0.75)
+		&:first-child
+			margin-left 0
+		&:hover
+			background-image linear-gradient(to top, darken(#e8e8e8, 8) 0%, white 100%)
+	&__link_back
+		position relative
+		hide-text()
+		&:after
+			position absolute
+			top 50%
+			left 50%
+			content ""
+			margin-top -7px
+			margin-left -7px
+			bg($pagination-left)
+	&__link_next
+		position relative
+		hide-text()
+		&:after
+			position absolute
+			top 50%
+			left 50%
+			content ""
+			margin-top -7px
+			margin-left -7px
+			bg($pagination-right)

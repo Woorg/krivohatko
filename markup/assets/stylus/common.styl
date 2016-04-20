@@ -15,17 +15,24 @@
 // .page__buffer
 //     height 50px
 
-
+html,
+body
+	height 100%
 
 .page
-	background #56B2FD url('../images/general/bg.jpg') 50% 100% no-repeat
+	background #56B2FD url('../images/general/bg.jpg') 50% 0% no-repeat
+	// background-size contain 100%
+	background-size cover 100%
+
 	font-family $ubuntu-lht
 	font-size 16px
-	line-height 20px
+	line-height 1
+
 	color black
-	background-size cover
+
 	&__w
 		padding-top 50px
+		padding-bottom 60px
 	&__w-w
 		margin auto
 		width 1032px
@@ -37,5 +44,10 @@
 
 .in
 	margin auto
+	padding-left 33px
+	padding-right 30px
 	width 1032px
+
+
+
 
